@@ -1,0 +1,160 @@
+
+
+<html>
+<head>
+<title>DOc Obj model</title>
+<script type = "text/javascript">
+     
+function register(){
+	         var x = new Array();
+  x[0]  = document.getElementById('fsname').value;
+  x[1]  = document.getElementById('lsname').value;  
+	 x[2]  = document.getElementById('email').value;  
+	 x[3]  = document.getElementById('psword').value;  
+	 x[4]  = document.getElementById('cfpsword').value;  
+	 
+	   
+	   
+	   var h = new Array();
+	 h[0] =  "<span style = 'color:red' >Pls!! enter your First name </span>";
+	 h[1] =  "<span style = 'color:red' >Pls!! and your Lastname?? </span>";
+	 h[2] =  "<span style = 'color:red' >input your functioning email add </span>";
+	 h[3] =  "<span style = 'color:red' > Enter your password </span>";
+	 h[4] =  "<span style = 'color:red' > Confirm the password </span>";
+	 
+
+		 
+		 var div = new Array("ename","elname","eemail","epasswd","ecfpswd");
+		 
+		 for(i in x){
+		 
+		      var divs =  div[i];
+		       var error = h[i];
+			   if(x[i]== ""){
+			         document.getElementById(divs).innerHTML = error;
+			   }else{
+			   
+			       document.getElementById(divs).innerHTML = "OK";
+			   }
+		 }
+	       
+	 }
+ 
+ function pass(){
+	     var firstp = document.getElementById('psword').value;
+		 var secondp = document.getElementById('cfpsword').value;
+		 
+		 if(firstp == secondp){
+		    document.getElementById('ecfpswd').innerHTML = "Password is Perfect!!";
+		 
+		 }else{
+		         document.getElementById('ecfpswd').innerHTML ="<span style = 'color:red'>Password do not match!!</span>";
+		 
+		 }
+		 
+}
+</script>
+	 
+	
+</head>
+
+<body background-color = "brown">
+
+
+<form>
+  <table border="1">
+  
+  <tr><td>First Name</td><td><input type ="text"  name="fsname"  id = "fsname" onkeyup = "register()"/></td><td><div id="ename" ></div></td></tr>
+  <tr><td>Last Name</td><td><input type ="text"  name="lsname"  id = "lsname" onkeyup = "register()"/></td><td><div id="elname" ></div></td></tr>
+  <tr><td>email</td><td><input type="text"  name="email"  id ="email" onkeyup = "register()" /></td><td><div id="eemail" ></div></td></tr>
+  <tr><td>Password Name</td><td><input type="password"  name="psword"  id ="psword" onkeyup = "register()"/></td><td><div id="epasswd" ></div></td></tr>
+  <tr><td>Confirm Password</td><td> <input type="password"  name="cfpsword"  id ="cfpsword" onkeyup = "pass()" /></td><td><div id="ecfpswd" ></div></td></tr>
+  
+  </table>
+  </br>
+                <input type="button"  name ="submit"  value="submit" onclick="register()" />
+	</form></br></br>
+  
+  <form  id= "form1"  onsubmit= "">
+  
+     Name:<input type = "text" id ="name" size= "30">
+     Description <input type = "text"  id = "desc"  size = "25">
+       <input type = "submit"  value = "submit">
+  </form ></br>
+
+<a  href = "finalproj.html">Visit our Site</a>
+
+</body>
+
+</html>
+
+
+
+
+
+<!DOCTYPE html 
+              PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+				   
+
+
+<html>
+<head>
+<title>Final Project</title>
+
+<meta name ="description"  content = "Online School courses"/>
+<meta name="keyword"  content= "courses,school,learning"/>
+<meta name = "author"   content = "Abeeb"/>
+<link rel = "stylesheet"    href = "styler.css"  type = "text/css"/>
+</head>
+<body>
+
+<div id = "header">
+
+    <div id = "logo"><img src = "hom.jpg">
+	  <marquee><h1>Saturn home Of Info Tech </h1></marquee>
+	</div>
+       <div id = "nav">
+    <ul>
+	
+       <li><a href= "finalproj.html">Home</a></li>
+	   <li><a href= "abeya.html">Login</a></li>
+	   <li><a href= "divnp.html">About us</a></li>
+	
+	</ul>
+ 
+             </div>
+        </div>
+ 
+<div id = "wrapper">Saturn coding center
+<div  id = "main"><img src = "nice.jpg"></div>
+
+<table id = "table3" cellspacing = "40">
+
+<td><h3>Home</h3>"Welcome to Saturn home of Innovation  And deep information Technology.... T"<a href = "finalproj.html" >more</a></td>
+
+<td><h3>Login</h3>"Log into our site to check out our courses, programm, achievements,among others...... "<a href = "abeya.html">more</a></td>
+
+<td><h3>About Us</h3>"Click this link to know more about our Services and Relation with our esteem customers"<a href = "divnp.html">more</a></td>
+
+
+</table>
+
+
+<div id = "footer">&copy; 2015 final year project</div>
+</div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
